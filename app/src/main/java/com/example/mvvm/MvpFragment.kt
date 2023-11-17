@@ -32,13 +32,19 @@ class FaqMvpFragment: Fragment(), ItemScreen.View {
         presenter = ItemPresenter(this)
         presenter.getData()
 
-        binding.listView.layoutManager = LinearLayoutManager(requireContext())
-        binding.listView.adapter = adapter
+        val listView = binding.listView
+
+        listView.layoutManager = LinearLayoutManager(requireContext())
+        listView.adapter = adapter
 
         adapter.itemClick = {
             presenter.openDetails(it)
 
         }
+
+
+        val offsetDecoration = OffsetDecoration(start = 16, top = 16, end = 15, bottom = 16)
+        listView.addItemDecoration(offsetDecoration)
     }
 
     override fun showMessage(message: String) {

@@ -15,6 +15,6 @@ class ItemPresenter(
     }
 
     override fun openDetails(item: Item) {
-        view.showMessage(item.description)
+        view.showMessage(item.title)
     }
 }
