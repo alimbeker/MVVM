@@ -3,7 +3,7 @@ package com.example.mvvm.repository
 class ItemRepositoryImpl : ItemRepository {
     private var itemList: List<Item> = listOf()
 
-    override fun getFaqList(): List<Item> {
+    override fun getItemList(): List<Item> {
         return itemList.ifEmpty { getRemoteFaq() }
     }
 

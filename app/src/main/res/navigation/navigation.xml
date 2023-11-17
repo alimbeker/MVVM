@@ -6,6 +6,10 @@
 
     <fragment
         android:id="@+id/faqMvpFragment"
-        android:name="com.example.mvvm.FaqMvpFragment"
+        android:name="com.example.mvvm.mvp.FaqMvpFragment"
         android:label="FaqMvpFragment" />
+    <fragment
+        android:id="@+id/faqMvvmFragment"
+        android:name="com.example.mvvm.moderviewvm.FaqMvvmFragment"
+        android:label="FaqMvvmFragment" />
 </navigation>

@@ -10,7 +10,7 @@ class ItemPresenter(
     private val repository: ItemRepository = ItemRepositoryImpl()
 
     override fun getData() {
-        val data = repository.getFaqList()
+        val data = repository.getItemList()
         view.showData(data)
     }
 
